@@ -89,6 +89,12 @@ make build                    # builds ./bin/server
 The single Go binary serves the landing at `/`, the SPA at `/app/`, and the JSON API
 at `/api`. Put Nginx + Certbot in front for TLS.
 
+## Dev tooling
+
+- **Hot reload:** `make watch` (install [air](https://github.com/air-verse/air): `go install github.com/air-verse/air@latest`).
+- **API collection:** open the `bruno/` folder in [Bruno](https://www.usebruno.com/) — the whole flow (CSRF → login → dashboard → admin), version-controlled with the code.
+- **Database GUI:** point DBeaver at `localhost:5432`, database / user / password `nova` / `nova` / `nova`.
+
 ## License
 
 [MIT](LICENSE).

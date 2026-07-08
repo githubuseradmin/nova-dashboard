@@ -89,6 +89,12 @@ make build                    # собирает ./bin/server
 Один Go-бинарь отдаёт лендинг по `/`, SPA по `/app/` и JSON API по `/api`.
 Спереди — Nginx + Certbot для TLS.
 
+## Dev-инструменты
+
+- **Hot-reload:** `make watch` (поставь [air](https://github.com/air-verse/air): `go install github.com/air-verse/air@latest`).
+- **Коллекция API:** открой папку `bruno/` в [Bruno](https://www.usebruno.com/) — весь flow (CSRF → login → dashboard → admin), версионируется вместе с кодом.
+- **GUI базы:** подключи DBeaver к `localhost:5432`, база / юзер / пароль `nova` / `nova` / `nova`.
+
 ## Лицензия
 
 [MIT](LICENSE).

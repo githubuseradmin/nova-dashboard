@@ -1,6 +1,6 @@
 # nova — developer tasks. Run `make` or `make help` for the list.
 .DEFAULT_GOAL := help
-.PHONY: help dev build test tidy fmt vet db-up db-down db-logs web-install web-dev web-build
+.PHONY: help dev watch build test tidy fmt vet db-up db-down db-logs web-install web-dev web-build
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-12s\033[0m %s\n", $$1, $$2}'
@@ -8,6 +8,9 @@ help: ## Show this help
 ## --- Backend (Go) ---
 dev: ## Run the API server (needs Postgres up)
 	go run ./cmd/server
+
+watch: ## Run the API with hot reload (install: go install github.com/air-verse/air@latest)
+	air
 
 build: ## Build the server binary into ./bin
 	go build -o bin/server ./cmd/server
