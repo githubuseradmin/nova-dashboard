@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>nova — a clean full-stack starter</title>
+    <meta
+      name="description"
+      content="nova is a clean, modern full-stack starter: Go, Svelte and PostgreSQL. Landing, session auth, dashboard and admin — no framework bloat."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="wordmark">nova</div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#stack">Stack</a>
+        <a href="https://github.com/githubuseradmin/nova-dashboard" rel="noopener">GitHub</a>
+        <a class="btn primary" href="/app/">Sign in</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Full-stack starter</p>
+        <h1>A clean, modern full-stack starter.</h1>
+        <p class="sub">
+          A landing page, session-based auth, a user dashboard and an admin panel —
+          built on <strong>Go</strong>, <strong>Svelte</strong> and
+          <strong>PostgreSQL</strong>, with a bespoke UI and no framework bloat.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary lg" href="/app/">Open the dashboard →</a>
+          <a class="btn ghost lg" href="https://github.com/githubuseradmin/nova-dashboard" rel="noopener">
+            View source
+          </a>
+        </div>
+        <ul class="chips" id="stack">
+          <li>Go · net/http · chi</li>
+          <li>PostgreSQL · pgx</li>
+          <li>Svelte 5 · TypeScript · Vite</li>
+          <li>argon2id · sessions · CSRF</li>
+          <li>Nginx · Certbot</li>
+        </ul>
+      </section>
+
+      <section class="features" id="features">
+        <article class="feature">
+          <h3>Native backend</h3>
+          <p>
+            Standard-library <code>net/http</code> with the <code>chi</code> router —
+            no <code>fasthttp</code>, no heavy framework. Just explicit, idiomatic Go.
+          </p>
+        </article>
+        <article class="feature">
+          <h3>Explicit data layer</h3>
+          <p>
+            <code>pgx</code> with hand-written SQL and migrations. No ORM magic —
+            you always know the query that runs.
+          </p>
+        </article>
+        <article class="feature">
+          <h3>Tiny frontend</h3>
+          <p>
+            Svelte 5 compiles to a ~17&nbsp;kB gzipped bundle. A bespoke design system
+            in plain CSS with light/dark — no Tailwind, no UI kit.
+          </p>
+        </article>
+        <article class="feature">
+          <h3>Secure by default</h3>
+          <p>
+            argon2id password hashing, opaque server-side sessions in
+            <code>HttpOnly</code> cookies, CSRF protection and role-based access.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>nova — MIT licensed</span>
+      <a href="https://github.com/githubuseradmin/nova-dashboard" rel="noopener">github.com/githubuseradmin/nova-dashboard</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+# --- Environment & secrets (never commit) ---
+.env
+.env.*
+!.env.example
+*.local
+
+# --- Go ---
+/bin/
+/tmp/
+*.exe
+*.test
+*.out
+coverage.*
+
+# --- Node / frontend ---
+web/app/node_modules/
+web/app/dist/
+web/app/.vite/
+npm-debug.log*
+
+# --- Editor / OS ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- Scratch / cache (other/ tree hygiene) ---
+_*/
